@@ -1,0 +1,66 @@
+<!--
+ * @Author: shihan
+ * @Date: 2023-11-06 15:40:33
+ * @version: 1.0
+ * @description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git repo</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='welcome.css') }}">
+    <title>Table from Git repo</title>
+</head>
+<body>
+    <div class="container">
+        <div class="info-wrapper">
+            <h2>Git   Repo   Info</h2>
+            <div class="form-wrapper">
+
+                <div class="light" onclick="generatecv()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    Generate your own CV!
+                </div>            
+                <script>
+                    function generatecv() {
+                        // 在这个函数内部，你可以编写跳转到其他页面的逻辑
+                        window.location.href = '/generatecv'; // 将链接替换为你想要跳转的页面地址
+                    }
+                </script>
+                <div class="table-container">
+                <table border="1">
+                    <tr>
+                        <th>repo names</th>
+                        <th>updated time</th>
+                        <th>commit hash</th>
+                        <th>author</th>
+                        <th>date</th>
+                        <th>commit message</th>
+                        <th>other</th>
+                    </tr>
+                    {% for i in range(items|length) %}
+                    <tr>
+                        <td>{{ items[i] }}</td>
+                        <td>{{ updated_times[i] }}</td>
+                        <td>{{ hashes[i] }}</td>
+                        <td>{{ authors[i] }}</td>
+                        <td>{{ dates[i] }}</td>
+                        <td>{{ commit_messages[i] }}</td>
+                    </tr>
+                    {% endfor %}
+                    
+                </table>
+            </div>
+                    
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>

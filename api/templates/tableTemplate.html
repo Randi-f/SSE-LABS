@@ -1,0 +1,55 @@
+<!--
+ * @Author: shihan
+ * @Date: 2023-11-06 18:48:33
+ * @version: 1.0
+ * @description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table from List Parameter</title>
+</head>
+
+<body>
+    <table border="1" id="myTable">
+        <tr>
+            <th>full_name</th>
+            <th>Age</th>
+            <th>Country</th>
+        </tr>
+    </table>
+
+    <table border="1">
+        <tr>
+            <th>Items</th>
+        </tr>
+        {% for item in items %}
+        <tr>
+            <td>{{ item }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+<!-- <script>
+    // 定义包含不同对象的列表
+    var myList = "{{items}}";
+
+    // 获取表格元素
+    var table = document.getElementById("myTable");
+
+    // 遍历列表中的对象，将它们的属性显示在表格中
+    for (var i = 0; i < myList.length; i++) {
+        var row = table.insertRow(i + 1); // 插入新行，"+1" 是为了跳过表头行
+        var cell1 = row.insertCell(0); // 插入第一个单元格（列）
+        var cell2 = row.insertCell(1); // 插入第二个单元格（列）
+        var cell3 = row.insertCell(2); // 插入第三个单元格（列）
+
+        // 将对象的属性赋值给单元格
+        cell1.textContent = myList[i].full_name;
+        // cell2.textContent = "null";
+        // cell3.textContent = "null";
+    }
+</script> -->
+</html>

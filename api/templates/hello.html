@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='welcome.css') }}">
+    <!-- <style>
+        
+    </style> -->
+</head>
+<script>
+    alert("Good to have you here!");
+</script>
+<body>
+    <div class="container">
+        <div class="login-wrapper">
+            <div class="header">Info</div>
+            <div class="form-wrapper">
+                
+                    <h2>Hello Child {{ name }}!</h2>
+                    <p>Child Name: {{ name }}</p>
+                    <p>Child Age: {{ age }}</p>
+                    
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+
+
+
